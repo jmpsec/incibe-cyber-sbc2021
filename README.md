@@ -1,5 +1,6 @@
 # INCIBE Cybersecurity Summer BootCamp 2021 :closed_lock_with_key:
 
+![INCIBE Cybersecurity Summer BootCamp 2021](banner.jpg)
 ## Detección de amenazas a escala utilizando [osquery](https://osquery.io) y [osctrl](https://osctrl.net)
 
 Ponente | Temática
@@ -56,4 +57,4 @@ sudo yum install osquery
 
 ### :bulb: Ejemplos
 
-## :pray: ¡Muchas gracias y que disfrutéis el taller! :raised_hands:	
+## :pray: ¡Muchas gracias y que disfrutéis el taller! :raised_hands:
