@@ -26,17 +26,17 @@ Se recomienda la descarga e instalación de osquery, version `4.9.0`, siendo és
 
 También es posible la instalación a través de gestores de paquetes en macOS, Windows y diferentes versiones de Linux (RPM y DEB):
 
-**macOS usando brew**
+:white_small_square: **macOS usando [brew](https://brew.sh/)**
 ```shell
 brew install --cask osquery
 ```
 
-**Windows usando chocolatey**
-```
+:white_small_square: **Windows usando [chocolatey](https://chocolatey.org/)**
+```shell
 choco install osquery
 ```
 
-**Debian Linux (DEB)**
+:white_small_square: **Debian Linux (DEB)**
 ```shell
 export OSQUERY_KEY=1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys $OSQUERY_KEY
@@ -45,7 +45,7 @@ sudo apt-get update
 sudo apt-get install osquery
 ```
 
-**RPM Linux**
+:white_small_square: **RPM Linux**
 ```shell
 curl -L https://pkg.osquery.io/rpm/GPG | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-osquery
 sudo yum-config-manager --add-repo https://pkg.osquery.io/rpm/osquery-s3-rpm.repo
@@ -55,6 +55,30 @@ sudo yum install osquery
 
 ### :boom: Despliegue de [osctrl](https://osctrl.net)
 
+La instalación de `osctrl` en un entorno de desarrollo puede realizarse de varias formas. El resultado será una instancia 100% funcional con la que seguir las indicaciones y ejemplos del taller.
+
+El primer paso es descarga o clonado del repositorio [https://github.com/jmpsec/osctrl](https://github.com/jmpsec/osctrl):
+
+```shell
+git clone https://github.com/jmpsec/osctrl
+```
+
+:white_small_square: **Despliegue con [Docker](https://www.docker.com/)**
+
+Para desplegar `osctrl` usando Docker la mejor opción es la utilidad `dockerize.sh` ya que realiza algunas tareas de configuración previas al lanzamiento de `osctrl`. También se puede utilizar el [Makefile](https://github.com/jmpsec/osctrl/blob/master/Makefile) y el comando `make docker_all` para simplificar las cosas, o directamente `dockerize.sh`:
+
+```shell
+./deploy/docker/dockerize.sh -u -b -f
+```
+
+El comando se encargará del build (`-b`) y ejecución (`-u`), con creación de nuevos certificados y configuración (`-f`).
+
+Para más informacion sobre `dockerize.sh` se puede utilizar `-h` para una ayuda detallada.
+
+:white_small_square: **Despliegue con [Vagrant](https://www.vagrantup.com/)**
+
+:white_small_square: **Despliegue standalone en Ubuntu**
+
 ### :bulb: Ejemplos
 
-## :pray: ¡Muchas gracias y que disfrutéis el taller! :raised_hands:
+## :pray: ¡Muchas gracias y que disfrutéis del taller! :raised_hands:
