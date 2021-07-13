@@ -3,10 +3,10 @@
 ![INCIBE Cybersecurity Summer BootCamp 2021](banner.jpg)
 ## Detección de amenazas a escala utilizando [osquery](https://osquery.io) y [osctrl](https://osctrl.net)
 
-Ponente | Temática
------------- | -------------
-Javier Marcos de Prado | Digital Forensics and Incident Response (DFIR)
-:link: | [https://www.incibe.es/summer-bootcamp/sbc2021/programa/TC6](https://www.incibe.es/summer-bootcamp/sbc2021/programa/TC6)
+| Ponente                | Temática                                                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Javier Marcos de Prado | Digital Forensics and Incident Response (DFIR)                                                                           |
+| :link:                 | [https://www.incibe.es/summer-bootcamp/sbc2021/programa/TC6](https://www.incibe.es/summer-bootcamp/sbc2021/programa/TC6) |
 
 1. Introducción a la necesidad de desplegar infraestructura de detección, tanto en entornos corporativos como de producción.
 
@@ -91,7 +91,17 @@ Una vez finalizado, la nueva instancia de `osctrl` con Vagrant estará disponibl
 OSCTRL_IP_ADDRESS="1.2.3.4" vagrant up
 ```
 
-:white_small_square: **Despliegue standalone en Ubuntu**
+:white_small_square: **Despliegue standalone en Ubuntu 20.04**
+
+La instalación estándar de `osctrl` puede hacerse en un sistema con Ubuntu 20.04, teniendo en cuenta que es necesaria la dirección IP del sistema, en el caso de ser `1.2.3.4`, el comando será el siguiente:
+
+```shell
+./deploy/provision.sh --nginx --postgres --enroll --all-hostname "1.2.3.4" --password "adminUbuntu"
+```
+
+Una vez finalizada la instalación y configuración de `osctrl` y sus componentes, estará disponible en [https://1.2.3.4:8443](https://1.2.3.4:8443) con usuario `admin` y password `adminUbuntu`.
+
+Para más informacion sobre `provision.sh` se puede utilizar `-h` para una ayuda detallada.
 
 ### :bulb: Ejemplos
 
