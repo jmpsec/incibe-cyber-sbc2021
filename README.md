@@ -24,7 +24,7 @@ Todas las demostraciones y ejemplos del taller se realizarán en directo pero en
 
 Se recomienda la descarga e instalación de osquery, version `4.9.0`, siendo ésta la última versión disponible en el momento de escribir esta guía. Para su instalación, se puede [descargar](https://osquery.io/downloads/official/4.9.0) para múltiples plataformas.
 
-También es posible la instalación a través de gestores de paquetes en macOS, Windows y diferentes versiones de Linux (RPM y DEB):
+También es posible la instalación a través de gestores de paquetes en macOS, Windows, diferentes versiones de Linux (RPM y DEB) y FreeBSD:
 
 :white_small_square: **macOS usando [brew](https://brew.sh/)**
 ```shell
@@ -51,6 +51,14 @@ curl -L https://pkg.osquery.io/rpm/GPG | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-o
 sudo yum-config-manager --add-repo https://pkg.osquery.io/rpm/osquery-s3-rpm.repo
 sudo yum-config-manager --enable osquery-s3-rpm-repo
 sudo yum install osquery
+```
+
+:white_small_square: **FreeBSD**
+
+```shell
+cd /usr/ports/sysutils/osquery && make install clean
+pkg install osquery
+portmaster sysutils/osquery
 ```
 
 ### :boom: Despliegue de [osctrl](https://osctrl.net)
@@ -103,6 +111,29 @@ Una vez finalizada la instalación y configuración de `osctrl` y sus componente
 
 Para más informacion sobre `provision.sh` se puede utilizar `-h` para una ayuda detallada.
 
-### :bulb: Ejemplos
+___
+
+## :bulb: Ejemplos
+
+**osquery tables**
+
+```shell
+osquery> .tables
+```
+
+**Show table in osquery**
+
+```shell
+osquery> pragma table_info("processes");
+```
+
+```shell
+osquery> .mode line
+osquery> select * from processes limit 1;
+```
+
+___
 
 ## :pray: ¡Muchas gracias y que disfrutéis del taller! :raised_hands:
+
+![Muchas gracias](brindis.gif)
