@@ -75,7 +75,21 @@ El comando se encargará del build (`-b`) y ejecución (`-u`), con creación de 
 
 Para más informacion sobre `dockerize.sh` se puede utilizar `-h` para una ayuda detallada.
 
+Una vez finalizado, la nueva instancia de `osctrl` con Docker estará disponible en [https://localhost:8443](https://localhost:8443) con usuario `admin` y password `admin`.
+
 :white_small_square: **Despliegue con [Vagrant](https://www.vagrantup.com/)**
+
+El despliegue de `osctrl` con Vagrant es básicamente lo mismo que el despliegue en una máquina virtual convencional, pero con una configuración pre-establecida a través del [Vagrantfile](https://github.com/jmpsec/osctrl/blob/master/Vagrantfile). El comando para la creación del entorno es el siguiente:
+
+```shell
+vagrant up
+```
+
+Una vez finalizado, la nueva instancia de `osctrl` con Vagrant estará disponible en [https://10.10.10.5:8443](https://10.10.10.5:8443) con usuario `admin` y password `admin`. Esa dirección IP está establecida por defecto puede personalizar sin hacer cambios mediante variables de entorno. Por ejemplo, si se quisiera cambiar la IP a `1.2.3.4`, el comando a utilizar sería el siguiente:
+
+```shell
+OSCTRL_IP_ADDRESS="1.2.3.4" vagrant up
+```
 
 :white_small_square: **Despliegue standalone en Ubuntu**
 
