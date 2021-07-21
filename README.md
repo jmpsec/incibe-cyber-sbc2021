@@ -7,6 +7,7 @@
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Javier Marcos de Prado | Digital Forensics and Incident Response (DFIR)                                                                           |
 | :link:                 | [https://www.incibe.es/summer-bootcamp/sbc2021/programa/TC6](https://www.incibe.es/summer-bootcamp/sbc2021/programa/TC6) |
+| :file_folder:          | [https://docs.google.com/presentation/d/1oodsJSDxfStu288sPkf5_mzGR1sz6R1VCXU_PvAZjLY/edit?usp=sharing](https://docs.google.com/presentation/d/1oodsJSDxfStu288sPkf5_mzGR1sz6R1VCXU_PvAZjLY/edit?usp=sharing) |
 
 1. Introducción a la necesidad de desplegar infraestructura de detección, tanto en entornos corporativos como de producción.
 
